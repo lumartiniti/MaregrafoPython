@@ -6,7 +6,7 @@ import datetime
 import time
 from IPython.display import display, clear_output
 
-diretorio = r'C:/Users/luima/OneDrive/Documentos/dados_python/Csv//'
+diretorio = r'C:/Users/luima/OneDrive/Documentos/dados_python.csv'
 mydir = os.listdir(diretorio)
 ctd_file = []
 
