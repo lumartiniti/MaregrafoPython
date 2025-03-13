@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
-with open('C:/Users/luima/OneDrive/Documentos/dados_python/maregrafo/IMB201014.txt') as io:
+with open('IMB201014.txt') as io:
     linhas = io.readlines()
     print(linhas)
 
