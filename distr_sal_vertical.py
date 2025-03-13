@@ -6,7 +6,7 @@ import time
 from IPython.display import clear_output, display
 from scipy.interpolate import griddata
 
-path = r'C:\Users\luima\OneDrive\Documentos\dados_python\csv\\'
+path = r'C:/Users/luima/OneDrive/Documentos/dados_python.csv'
 mydir = os.listdir(path) # retorna uma lista contendo os nomes de todos os arquivos e subdiretórios dentro do diretório especificado.
 
 ctd_file = []
