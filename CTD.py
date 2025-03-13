@@ -6,7 +6,7 @@ import datetime
 from CTD import date_time, oxygen_sat, depth
 from teste import salinidades
 
-path = r'C:\Users\luima\OneDrive\Documentos\dados_python\csv\\'
+path = r'C:/Users/luima/OneDrive/Documentos/dados_python.csv'
 
 mydir = os.listdir(path) # retorna uma lista contendo os nomes de todos os arquivos e subdiretórios dentro do diretório especificado.
 
