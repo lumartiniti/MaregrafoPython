@@ -9,3 +9,4 @@ Bibliotecas necessárias:
 - import matplotlib.dates as mdates ->  Módulo específico do Matplotlib para formatar e exibir datas nos eixos dos gráficos.
 
 
+
