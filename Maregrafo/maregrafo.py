@@ -3,13 +3,25 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
-with open('IMB201014.txt') as io:
+
+with open('C:/Users/luima/OneDrive/Documentos/dados_python/maregrafo/IMB201014.txt') as io:
     linhas = io.readlines()
     print(linhas)
 
 guarda_linhas = []
 
 for line in linhas:
+    linha_corrigida = line.strip().replace(',', '.')
+
+    if not linha_corrigida:
+        continue
+
+    linha_quebrada = linha_corrigida.split(';')
+
+    if len(linha_quebrada) < 4:
+        print(f"Formato incorreto na linha: {linha_corrigida}")
+        continue
+
     linha_corrigida = line.replace(',', '.')
     linha_quebrada = linha_corrigida.split(';')
 
@@ -54,5 +66,4 @@ ax.set_xlabel('Tempo')
 ax.set_ylabel('Nivel(m)')
 
 plt.legend()
-
 plt.show()

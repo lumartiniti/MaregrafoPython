@@ -1,4 +1,4 @@
-import os 
+import os  # gerar lista com o nome dos arquivos de CTD e carregá-los -> pacote OS permite trabalhar com arquivos no sistema de diretórios do sistema.
 import numpy as np
 import matplotlib.pyplot as plt
 import datetime
@@ -6,13 +6,13 @@ import time
 from IPython.display import clear_output, display
 from scipy.interpolate import griddata
 
-path = r'C:/Users/luima/OneDrive/Documentos/dados_python.csv'
-mydir = os.listdir(path) 
+path = r'C:\Users\luima\OneDrive\Documentos\dados_python\csv\\'
+mydir = os.listdir(path) # retorna uma lista contendo os nomes de todos os arquivos e subdiretórios dentro do diretório especificado.
 
 ctd_file = []
-for file in mydir: 
-    if file.endswith('.Csv'): 
-        ctd_file.append(file) 
+for file in mydir: # A variável file recebe, um por um, os nomes dos arquivos contidos em mydir -> Percorre mydir.
+    if file.endswith('.Csv'): # Verifica se o nome do arquivo termina com ".csv".
+        ctd_file.append(file) # Se a condição for verdadeira, o nome do arquivo é adicionado à lista ctd_file.
 
 def carrega_ctd(path, ctd_file):
     with open(path + ctd_file) as file:
@@ -26,11 +26,11 @@ def carrega_ctd(path, ctd_file):
         oxygen_sat = []
         oxygen = []
 
-        for line in file: 
+        for line in file: # itera sobre cada linha do arquivo, ou seja, percorre o arquivo linha por linha.
 
-            if line.startswith("StartTime="):
+            if line.startswith("StartTime="): # Usa startswith() para verificar se a linha começa com "StartTime=" (mais seguro do que line[0:10]).
 
-                date_time = line.strip() 
+                date_time = line.strip() # Remove espaços em branco e \n no final da linha.
 
                 year = int(date_time[10:14])
                 month = int(date_time[15:17])
